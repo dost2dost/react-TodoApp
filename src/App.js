@@ -1,6 +1,7 @@
 import React,{useState,useRef,useEffect}from 'react';
 import TodList from './TodList';
 import uuidv4 from 'uuid/v4';
+import './App.css'
 
 function App() {
   const [todos,setTodos]=useState([]);
@@ -35,7 +36,7 @@ function App() {
   }
   
   return (
-    <div>
+    <div className="flexbox-container">
     <TodList todos={todos} toggleTodos={toggleTodos}/>
     <input ref={todoRefname} type="text" />
     <button onClick={handleAddTodos}>Add todo</button>
